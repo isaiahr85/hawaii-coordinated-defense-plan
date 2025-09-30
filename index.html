@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hawaiʻi Island Coordinated Defense Plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- ... (Head content unchanged for brevity; see prompt) ... -->
+    <style>
+        /* ...Styles as provided in the prompt... */
+    </style>
+</head>
+<body class="antialiased">
+    <!-- ...Header/navigation as in prompt... -->
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <!-- ...Dashboard and other sections as in prompt... -->
+
+        <section id="threat" class="pt-20 -mt-16 mb-12">
+            <h2 class="text-3xl font-bold text-red-400 text-center mb-8">Threat Analysis: "Anti-Noah's Ark" Coalition</h2>
+            <p class="text-center max-w-3xl mx-auto text-gray-300 mb-8">This section details the adversary, a locally-based, ideologically motivated extremist group. Understanding their composition, capabilities, and probable courses of action is critical for effective counter-operations.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                <div class="p-6 rounded-lg shadow-md content-card">
+                    <h3 class="text-xl font-bold text-red-400 mb-4">Adversary Profile</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><strong>Identity:</strong> Loosely organized, socially isolated cells.</li>
+                        <li><strong>Composition:</strong> Small, decentralized, no formal command structure.</li>
+                        <li><strong>Ideology:</strong> Rejects community authority; seeks to "remove happiness" from perceived aggressors.</li>
+                        <li><strong>Limitations:</strong> Limited logistics and sustainment capacity; vulnerable to community tip-offs.</li>
+                    </ul>
+                    <h3 class="text-xl font-bold text-red-400 mt-6 mb-4">Adversary Capabilities</h3>
+                    <div class="chart-container h-80 md:h-96">
+                        <canvas id="capabilitiesChart"></canvas>
+                    </div>
+                </div>
+                <div class="p-6 rounded-lg shadow-md content-card">
+                    <h3 class="text-xl font-bold text-red-400 mb-4">Probable Enemy Courses of Action (COA)</h3>
+                    <ol class="list-decimal ml-5 space-y-3 text-gray-300">
+                        <li><strong>Coordinated Multi-Point Arson:</strong> Simultaneous ignitions in WUI zones to overwhelm response and create chaos.</li>
+                        <li><strong>Infrastructure Sabotage:</strong> Attacks on power, water, or comms nodes to hinder emergency response and sow panic.</li>
+                        <li><strong>Disinformation Operations:</strong> Use of social media and word-of-mouth to spread false reports and incite public confusion.</li>
+                        <li><strong>Concealment and Withdrawal:</strong> Use of terrain and local knowledge to evade capture post-attack.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="plan" class="pt-20 -mt-16 mb-12">
+            <h2 class="text-3xl font-bold text-red-400 text-center mb-8">Operational Plan: Phased Response & COAs</h2>
+            <div class="content-card p-6 rounded-lg shadow-md mb-6">
+                <div class="flex flex-wrap justify-center gap-4 mb-6">
+                    <button class="tab-button active" data-tab="phase0">Phase 0: Prevention</button>
+                    <button class="tab-button" data-tab="phase1">Phase 1: Detection</button>
+                    <button class="tab-button" data-tab="phase2">Phase 2: Response</button>
+                    <button class="tab-button" data-tab="phase3">Phase 3: Recovery</button>
+                </div>
+                <div id="phase0" class="tab-content">
+                    <h3 class="text-xl font-bold text-red-400 mb-2">Phase 0: Prevention & Posture</h3>
+                    <ul class="list-disc ml-5 space-y-2 text-gray-300">
+                        <li>Community engagement and suspicious activity reporting campaign.</li>
+                        <li>Pre-stage resources in high-risk areas; update mutual aid agreements.</li>
+                        <li>Conduct vulnerability assessments for critical infrastructure nodes.</li>
+                    </ul>
+                </div>
+                <div id="phase1" class="tab-content hidden">
+                    <h3 class="text-xl font-bold text-red-400 mb-2">Phase 1: Detection</h3>
+                    <ul class="list-disc ml-5 space-y-2 text-gray-300">
+                        <li>Automate fire watch and critical node monitoring (drones, remote sensors).</li>
+                        <li>Establish real-time incident reporting through unified comms.</li>
+                        <li>Deploy intelligence teams for threat tracking.</li>
+                    </ul>
+                </div>
+                <div id="phase2" class="tab-content hidden">
+                    <h3 class="text-xl font-bold text-red-400 mb-2">Phase 2: Response</h3>
+                    <ul class="list-disc ml-5 space-y-2 text-gray-300">
+                        <li>Dynamic asset deployment based on evolving threat picture.</li>
+                        <li>Activate rumor control and public messaging team.</li>
+                        <li>Coordinate law enforcement and fire/EMS for rapid containment and suspect apprehension.</li>
+                    </ul>
+                </div>
+                <div id="phase3" class="tab-content hidden">
+                    <h3 class="text-xl font-bold text-red-400 mb-2">Phase 3: Recovery</h3>
+                    <ul class="list-disc ml-5 space-y-2 text-gray-300">
+                        <li>Begin damage assessment and critical infrastructure restoration.</li>
+                        <li>Maintain public information flow and community reassurance.</li>
+                        <li>Debrief, after-action reviews, and plan refinement.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content-card p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold text-red-400 mb-4">Key Courses of Action (COAs)</h3>
+                <div class="flex flex-wrap gap-4 justify-center mb-4">
+                    <button class="tab-button active" data-tab="coa1">COA 1: Contain & Suppress</button>
+                    <button class="tab-button" data-tab="coa2">COA 2: Protect Infrastructure</button>
+                    <button class="tab-button" data-tab="coa3">COA 3: Information Ops</button>
+                </div>
+                <div id="coa1" class="tab-content">
+                    <ul class="list-disc ml-5 space-y-2 text-gray-300">
+                        <li>Rapid multi-agency deployment to ignition points.</li>
+                        <li>Use of aerial assets for fire mapping and suppression.</li>
+                        <li>Mutual aid activation for surge response.</li>
+                    </ul>
+                </div>
+                <div id="coa2" class="tab-content hidden">
+                    <ul class="list-disc ml-5 space-y-2 text-gray-300">
+                        <li>Harden key infrastructure with physical barriers and surveillance.</li>
+                        <li>Deploy quick-repair teams for comms and power restoration.</li>
+                        <li>Maintain backup communications and power for EOCs.</li>
+                    </ul>
+                </div>
+                <div id="coa3" class="tab-content hidden">
+                    <ul class="list-disc ml-5 space-y-2 text-gray-300">
+                        <li>Activate social media monitoring and rumor control cell.</li>
+                        <li>Push verified information through trusted channels only.</li>
+                        <li>Counter disinformation with rapid, transparent updates.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="forces" class="pt-20 -mt-16 mb-12">
+            <h2 class="text-3xl font-bold text-red-400 text-center mb-8">Forces: Structure & Roles</h2>
+            <div class="content-card p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold text-red-400 mb-4">Friendly Forces Hierarchy</h3>
+                <div class="flex flex-col items-center">
+                    <div class="bg-gray-700 px-6 py-2 rounded-full shadow-lg text-white font-bold mb-2">Unified Command</div>
+                    <div class="flex flex-wrap gap-6 justify-center mb-2">
+                        <div class="bg-gray-800 px-4 py-2 rounded-full shadow-md text-amber-300 font-semibold">Hawaiʻi Fire Department</div>
+                        <div class="bg-gray-800 px-4 py-2 rounded-full shadow-md text-blue-300 font-semibold">Hawaiʻi Police Department</div>
+                        <div class="bg-gray-800 px-4 py-2 rounded-full shadow-md text-cyan-300 font-semibold">Emergency Management</div>
+                    </div>
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        <div class="bg-gray-900 px-3 py-1 rounded shadow text-yellow-200 text-sm">Public Works</div>
+                        <div class="bg-gray-900 px-3 py-1 rounded shadow text-violet-200 text-sm">Health & Human Services</div>
+                        <div class="bg-gray-900 px-3 py-1 rounded shadow text-red-200 text-sm">Volunteer Groups</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="signal" class="pt-20 -mt-16 mb-12">
+            <h2 class="text-3xl font-bold text-red-400 text-center mb-8">Command & Signal</h2>
+            <div class="content-card p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold text-red-400 mb-4">Primary Communication Channels</h3>
+                <ul class="list-disc ml-5 space-y-2 text-gray-300">
+                    <li>Unified Emergency Operations Center (EOC): Secure voice & data (landline, radio, SATCOM fallback).</li>
+                    <li>Interoperable radio network (VHF/UHF) for field units.</li>
+                    <li>Public Information Officer (PIO): Single source for all outbound messaging.</li>
+                </ul>
+                <h3 class="text-xl font-bold text-red-400 mt-6 mb-4">Contingency Communications</h3>
+                <ul class="list-disc ml-5 space-y-2 text-gray-300">
+                    <li>Deployable mobile repeaters and satellite comms for blackout scenarios.</li>
+                    <li>Amateur radio operator integration.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="resources" class="pt-20 -mt-16 mb-12">
+            <h2 class="text-3xl font-bold text-red-400 text-center mb-8">Resources & Logistics</h2>
+            <div class="content-card p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold text-red-400 mb-4">Critical Resource Pre-Positioning</h3>
+                <ul class="list-disc ml-5 space-y-2 text-gray-300">
+                    <li>Water tenders and brush trucks in or near WUI zones.</li>
+                    <li>Portable generators and comms kits staged at EOC and substations.</li>
+                    <li>Fuel, food, and shelter cache at strategic points.</li>
+                </ul>
+                <h3 class="text-xl font-bold text-red-400 mt-6 mb-4">Logistics Coordination</h3>
+                <ul class="list-disc ml-5 space-y-2 text-gray-300">
+                    <li>County and State mutual aid agreements in effect.</li>
+                    <li>Real-time logistics dashboard for resource tracking.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Data/API Policy -->
+    <div id="policy-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
+        <div class="modal-overlay absolute inset-0"></div>
+        <div class="relative bg-gray-900 border-2 border-violet-500 rounded-lg shadow-xl p-8 max-w-lg w-full z-10">
+            <h3 class="text-xl font-bold text-violet-400 mb-4">Data & API Usage Disclosure</h3>
+            <p class="text-gray-200 mb-4">
+                <strong>This dashboard does not access, process, or transmit any live PII or sensitive government information.</strong> All data visualizations are based on publicly available or hypothetical datasets. The "AI Real-Time Threat Briefing" feature is simulated and does not connect to external government or law enforcement systems.
+            </p>
+            <button id="close-policy-btn" class="mt-2 bg-violet-700 hover:bg-violet-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-violet-400">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Navbar active link highlighting
+        function setActiveLink() {
+            const hash = window.location.hash || "#dashboard";
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') === hash) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                if (link.getAttribute('href') === hash) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+        window.addEventListener('hashchange', setActiveLink);
+        document.addEventListener('DOMContentLoaded', setActiveLink);
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            document.getElementById('hamburger-icon').classList.toggle('hidden');
+            document.getElementById('close-icon').classList.toggle('hidden');
+        });
+
+        // Tabbed content logic for phases and COAs
+        document.querySelectorAll('.tab-button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const groupBtns = Array.from(this.parentElement.children).filter(x => x.classList.contains('tab-button'));
+                groupBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                // Hide all tab-content in this section
+                const tabId = this.dataset.tab;
+                const section = this.closest('.content-card');
+                section.querySelectorAll('.tab-content').forEach(tc => tc.classList.add('hidden'));
+                section.querySelector(`#${tabId}`).classList.remove('hidden');
+            });
+        });
+
+        // Modal logic
+        document.getElementById('show-policy-btn').addEventListener('click', function() {
+            document.getElementById('policy-modal').classList.remove('hidden');
+        });
+        document.getElementById('close-policy-btn').addEventListener('click', function() {
+            document.getElementById('policy-modal').classList.add('hidden');
+        });
+
+        // Current time header
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('current-time-header').textContent = now.toLocaleString('en-US', {
+                timeZone: 'Pacific/Honolulu',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                year: 'numeric',
+                month: 'short',
+                day: '2-digit'
+            });
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+
+        // Chart.js: Vulnerability chart
+        new Chart(document.getElementById('vulnerabilityChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: ['WUI Zones', 'Power Grid', 'Comms Hubs', 'Water Supply', 'Access Roads'],
+                datasets: [{
+                    label: 'Vulnerability Level',
+                    data: [9, 7, 8, 6, 7],
+                    backgroundColor: [
+                        'rgba(239, 68, 68, 0.8)',
+                        'rgba(251, 191, 36, 0.7)',
+                        'rgba(34, 211, 238, 0.7)',
+                        'rgba(59, 130, 246, 0.7)',
+                        'rgba(132, 204, 22, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(239, 68, 68, 1)',
+                        'rgba(251, 191, 36, 1)',
+                        'rgba(34, 211, 238, 1)',
+                        'rgba(59, 130, 246, 1)',
+                        'rgba(132, 204, 22, 1)'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return 'Vulnerability: ' + context.parsed.y + ' / 10';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 10,
+                        ticks: { color: '#FBBF24' },
+                        grid: { color: '#374151' }
+                    },
+                    x: {
+                        ticks: { color: '#D1D5DB' },
+                        grid: { color: '#374151' }
+                    }
+                }
+            }
+        });
+
+        // Chart.js: Enemy capabilities radar
+        new Chart(document.getElementById('capabilitiesChart').getContext('2d'), {
+            type: 'radar',
+            data: {
+                labels: ['Arson', 'Sabotage', 'Info Ops', 'Mobility', 'Concealment'],
+                datasets: [{
+                    label: 'Adversary Threat Profile',
+                    data: [9, 7, 8, 6, 8],
+                    backgroundColor: 'rgba(239, 68, 68, 0.4)',
+                    borderColor: 'rgba(239, 68, 68, 1)',
+                    pointBackgroundColor: '#F87171',
+                    pointBorderColor: '#FFF'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': ' + context.formattedValue + ' / 10';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        max: 10,
+                        angleLines: { color: '#FBBF24' },
+                        grid: { color: '#374151' },
+                        pointLabels: { color: '#D1D5DB', font: { size: 14 } },
+                        ticks: { color: '#FBBF24', stepSize: 2 }
+                    }
+                }
+            }
+        });
+
+        // AI Real-Time Threat Briefing (Simulated)
+        document.getElementById('generate-briefing-btn').addEventListener('click', async function () {
+            document.getElementById('loader').classList.remove('hidden');
+            document.getElementById('results-container').classList.add('hidden');
+            document.getElementById('error-box').classList.add('hidden');
+            await new Promise(r => setTimeout(r, 1800)); // Simulated API delay
+
+            // Simulate raw data fetch and summary
+            document.getElementById('loader').classList.add('hidden');
+            document.getElementById('results-container').classList.remove('hidden');
+            document.getElementById('briefing-output').innerHTML = `
+                <p><strong>Current Threat Level:</strong> MODERATE – No verified hostile action in past 24 hours. Critical vulnerabilities remain in WUI and comms nodes.</p>
+                <p><strong>Recent Activity:</strong> Increased social media chatter matching known adversary narratives. Two suspicious ignition attempts (no damage).</p>
+                <p><strong>Priority Recommendations:</strong> Sustain high visibility patrols, reinforce comms redundancy, and intensify public engagement in high-risk zones.</p>
+            `;
+            document.getElementById('raw-data-output').innerHTML = `
+                <ul class="list-disc ml-5 text-gray-300 space-y-2">
+                    <li><strong>911 Call Logs:</strong> 2 reports of suspicious activity, Orchidlands & Mountain View (last 24 hrs).</li>
+                    <li><strong>Power Grid Status:</strong> 99.9% operational. Anomaly flagged at Kurtistown substation.</li>
+                    <li><strong>Social Media Monitoring:</strong> 5 flagged posts, 2 accounts under review for incitement.</li>
+                    <li><strong>Weather/Fire Indices:</strong> Moderate risk; winds 10-15 mph, relative humidity 46%.</li>
+                </ul>
+            `;
+        });
+    </script>
+</body>
+</html>
